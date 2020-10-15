@@ -1,0 +1,109 @@
+body {
+    background-color: whitesmoke;
+    height:100%;
+    margin:0;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    height:100%;
+    align-content: stretch;
+}
+
+.container #content {
+    border: 1px black solid;
+}
+
+#sidebar {
+    background-color: cyan;
+    flex: 1;
+}
+
+#content {
+    flex: 2;
+    position: relative;
+}
+
+#content .home-header{
+    border-bottom: 1px black solid;
+    padding: 0 0 0 10px;
+}
+
+#content .new-post {
+    display: flex;
+    border-bottom: 1px black solid;
+}
+
+.avatar {
+    flex: 1;
+    padding: 10px 0 0 10px;
+}
+
+.avatar img {
+    width: 70px;
+    height: 70px;
+    border-radius: 2em;
+}
+
+.post-textbox {
+    flex: 5;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-textbox textarea {
+    width: 90%;
+    height: 130px;
+    border: none;
+    margin: 10px 10px 10px 10px;
+}
+
+.tweet-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 10px 10px 10px 10px;
+}
+
+.tweet-bar .post-icon-button{
+    flex: 5;
+    float: right;
+    text-align: right;
+}
+
+.tweet-bar button {
+    max-width: 100px;
+    height: 30px;
+    background-color: cyan;
+    border: none;
+    border-radius: 0.75em;
+}
+
+.tweet-bar .post-icon {
+    max-width: 30px;
+    max-height: 30px;
+    flex: 1;
+}
+
+#trendings {
+    background-color: yellow;
+    flex: 1;
+}
+
+@media(max-width: 986px){
+    #trendings {
+        flex-basis: 0;
+        flex-grow: 0;
+    }
+}
+
+@media(max-width: 1265px){
+    #sidebar {
+        flex-basis: 0;
+        flex-grow: 0;
+    }
+}
